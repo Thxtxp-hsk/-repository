@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popup and Heart Shape</title>
+    <style>
+        body {
+            text-align: center;
+            margin-top: 320px;
+            font-family: Arial, sans-serif;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        /* เพิ่ม media query ให้ถูกต้อง */
+        @media (max-width: 600px) {
+            body {
+                font-size: 14px;
+            }
+            button {
+                padding: 8px 16px;
+            }
+        }
+
+        /* สไตล์ของหัวใจ */
+        .heart {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            margin: 100px auto;
+            transform: rotate(-45deg);
+        }
+
+        .heart:before, .heart:after {
+            content: '';
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            border-radius: 50%;
+        }
+
+        .heart:before {
+            left: 0;
+            top: -50px;
+        }
+
+        .heart:after {
+            top: 0px;
+            left: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="heart"></div>
+    <button id="popupButton">Click IT!!</button>
+
+    <script>
+        // ฟังก์ชันสำหรับแสดง Popup Messages
+        document.getElementById("popupButton").addEventListener("click", function() {
+            alert("FOR BABE: ฮาโหลๆ");
+            alert("FOR BABE: เค้ามีอายัยจะบอกค้าบ");
+            alert("FOR BABE: เค้าน่ะ");
+            alert("FOR BABE: รักแฟนฝุดๆ");
+        });
+    </script>
+</body>
+</html>
